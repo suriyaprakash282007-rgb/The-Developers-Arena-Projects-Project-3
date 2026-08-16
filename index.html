@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aria Vance | Creative Technologist & UI/UX Engineer</title>
+  <meta name="description" content="Portfolio of Aria Vance, a Creative Technologist and UI/UX Engineer specializing in sleek interfaces, immersive interactions, and robust front-end systems.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <!-- Scroll Progress Indicator -->
+  <div class="scroll-progress-container">
+    <div class="scroll-progress-bar" id="scrollBar"></div>
+  </div>
+
+  <!-- Header & Navigation -->
+  <header class="main-header">
+    <div class="container nav-container">
+      <a href="#" class="logo">
+        <span class="logo-dot"></span> aria.vance
+      </a>
+      
+      <nav class="nav-menu" id="navMenu">
+        <ul>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#planner" class="nav-link">Project Planner</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <!-- Theme Toggle Button -->
+        <button id="themeToggleBtn" class="theme-toggle-btn" aria-label="Toggle theme">
+          <i data-lucide="sun" class="sun-icon"></i>
+          <i data-lucide="moon" class="moon-icon"></i>
+        </button>
+        
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobileMenuToggle" class="mobile-menu-toggle" aria-label="Toggle navigation menu">
+          <i data-lucide="menu" class="open-icon"></i>
+          <i data-lucide="x" class="close-icon"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+      <div class="hero-bg-gradients">
+        <div class="gradient-blob blob-1"></div>
+        <div class="gradient-blob blob-2"></div>
+      </div>
+      <div class="container hero-container">
+        <div class="hero-content">
+          <span class="hero-subtitle">WELCOME TO MY WORLD</span>
+          <h1 class="hero-title">
+            Hi, I'm Aria Vance. <br>
+            I build <span class="typing-text" id="typingText"></span>
+          </h1>
+          <p class="hero-description">
+            A Creative Technologist & UI/UX Engineer crafting pixel-perfect, interactive digital experiences that bridge the gap between aesthetics and engineering.
+          </p>
+          <div class="hero-ctas">
+            <a href="#projects" class="btn btn-primary">View My Work <i data-lucide="arrow-right"></i></a>
+            <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="profile-card-wrapper">
+            <div class="profile-card-glass">
+              <div class="profile-img-container">
+                <img src="images/profile.png" alt="Aria Vance Portrait" class="profile-img">
+              </div>
+              <div class="profile-badge">
+                <span class="pulse-indicator"></span>
+                <span>Available for hire</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section with Show/Hide Tabs -->
+    <section class="about-section" id="about">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">BIOGRAPHY</span>
+          <h2 class="section-title">About Me</h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-info">
+            <h3>Bridging Design & Development</h3>
+            <p>
+              I believe that software should be functional and beautiful. With over five years of experience designing and building products, I focus on constructing rich digital experiences with micro-animations, glassmorphic styles, and clean architectures.
+            </p>
+            <p>
+              When I'm not writing code, I research web spatial computing, design UI design kits, and contribute to open-source libraries.
+            </p>
+            
+            <div class="quick-stats">
+              <div class="stat-card">
+                <span class="stat-number">5+</span>
+                <span class="stat-label">Years Exp</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-number">40+</span>
+                <span class="stat-label">Projects</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-number">99%</span>
+                <span class="stat-label">Success Rate</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-tabs-container">
+            <!-- Tabs Navigation -->
+            <div class="tabs-nav">
+              <button class="tab-btn active" data-tab="skills">Skills</button>
+              <button class="tab-btn" data-tab="experience">Experience</button>
+              <button class="tab-btn" data-tab="education">Education</button>
+            </div>
+
+            <!-- Tab Content Pane: Skills -->
+            <div class="tab-pane active" id="skills-tab">
+              <h4 class="tab-pane-title">Technical Expertise</h4>
+              <div class="skills-grid">
+                <div class="skill-category">
+                  <h5>Frontend</h5>
+                  <div class="skill-tags">
+                    <span class="skill-tag">HTML5 / CSS3</span>
+                    <span class="skill-tag">JavaScript (ES6+)</span>
+                    <span class="skill-tag">TypeScript</span>
+                    <span class="skill-tag">React / Next.js</span>
+                  </div>
+                </div>
+                <div class="skill-category">
+                  <h5>UI/UX Design</h5>
+                  <div class="skill-tags">
+                    <span class="skill-tag">Figma</span>
+                    <span class="skill-tag">Motion Design</span>
+                    <span class="skill-tag">Wireframing</span>
+                    <span class="skill-tag">Typography</span>
+                  </div>
+                </div>
+                <div class="skill-category">
+                  <h5>Tools & Tech</h5>
+                  <div class="skill-tags">
+                    <span class="skill-tag">Git & GitHub</span>
+                    <span class="skill-tag">Node.js</span>
+                    <span class="skill-tag">Tailwind CSS</span>
+                    <span class="skill-tag">WebGL / Three.js</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tab Content Pane: Experience -->
+            <div class="tab-pane" id="experience-tab">
+              <h4 class="tab-pane-title">Work History</h4>
+              <div class="timeline">
+                <div class="timeline-item">
+                  <div class="timeline-dot"></div>
+                  <div class="timeline-header">
+                    <span class="timeline-date">2024 - Present</span>
+                    <span class="timeline-title">Lead UI/UX Engineer</span>
+                    <span class="timeline-company">Aether Studio</span>
+                  </div>
+                  <p class="timeline-desc">Leading frontend implementation and UI systems for high-fidelity SaaS applications. Mentoring junior developers.</p>
+                </div>
+                <div class="timeline-item">
+                  <div class="timeline-dot"></div>
+                  <div class="timeline-header">
+                    <span class="timeline-date">2022 - 2024</span>
+                    <span class="timeline-title">Frontend Developer</span>
+                    <span class="timeline-company">Quantum Tech</span>
+                  </div>
+                  <p class="timeline-desc">Built interactive web apps using modern frameworks, resulting in a 40% performance increase for client portals.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tab Content Pane: Education -->
+            <div class="tab-pane" id="education-tab">
+              <h4 class="tab-pane-title">Academic Credentials</h4>
+              <div class="timeline">
+                <div class="timeline-item">
+                  <div class="timeline-dot"></div>
+                  <div class="timeline-header">
+                    <span class="timeline-date">2018 - 2022</span>
+                    <span class="timeline-title">B.S. in Computer Science & Interaction Design</span>
+                    <span class="timeline-company">Nexus Tech University</span>
+                  </div>
+                  <p class="timeline-desc">Specialized in human-computer interaction, interactive media systems, and advanced computer graphics.</p>
+                </div>
+                <div class="timeline-item">
+                  <div class="timeline-dot"></div>
+                  <div class="timeline-header">
+                    <span class="timeline-date">2021</span>
+                    <span class="timeline-title">Advanced UI Design Certification</span>
+                    <span class="timeline-company">Design League</span>
+                  </div>
+                  <p class="timeline-desc">Intensive professional certification program covering visual hierarchies, color theory, and prototyping.</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section with Interactive Image Slider -->
+    <section class="projects-section" id="projects">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">SHOWCASE</span>
+          <h2 class="section-title">Featured Projects</h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <!-- Slider Container -->
+        <div class="slider-wrapper">
+          <div class="slider-container" id="projectSlider">
+            <!-- Slide 1 -->
+            <div class="project-slide active">
+              <div class="slide-image-wrapper">
+                <img src="images/project1.png" alt="AI Analytics Dashboard UI" class="slide-img">
+              </div>
+              <div class="slide-content">
+                <span class="slide-project-num">Project 01</span>
+                <h3>Nova AI Analytics Dashboard</h3>
+                <p>
+                  A real-time predictive analytics dashboard utilizing glassmorphic UI card designs, animated metrics indicators, and SVG line charts that adapt dynamically.
+                </p>
+                <div class="slide-tags">
+                  <span>React</span>
+                  <span>D3.js</span>
+                  <span>Figma</span>
+                </div>
+                <a href="#" class="btn btn-text">Read Case Study <i data-lucide="arrow-right"></i></a>
+              </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="project-slide">
+              <div class="slide-image-wrapper">
+                <img src="images/project2.png" alt="Smart Home Control UI" class="slide-img">
+              </div>
+              <div class="slide-content">
+                <span class="slide-project-num">Project 02</span>
+                <h3>Helios Smart Home App</h3>
+                <p>
+                  An intuitive mobile application interface for controlling IoT appliances, adjusting room temperatures with a custom radial dial, and programming daily triggers.
+                </p>
+                <div class="slide-tags">
+                  <span>HTML5</span>
+                  <span>CSS Custom Props</span>
+                  <span>JavaScript</span>
+                </div>
+                <a href="#" class="btn btn-text">Read Case Study <i data-lucide="arrow-right"></i></a>
+              </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="project-slide">
+              <div class="slide-image-wrapper">
+                <img src="images/project3.png" alt="Spatial Travel Booking UI" class="slide-img">
+              </div>
+              <div class="slide-content">
+                <span class="slide-project-num">Project 03</span>
+                <h3>Vortex Space Travel Hub</h3>
+                <p>
+                  A futuristic WebGL travel portal concept where users can book flights to various planets, previewing orbits and shuttle models through dynamic graphics.
+                </p>
+                <div class="slide-tags">
+                  <span>Three.js</span>
+                  <span>CSS Grid</span>
+                  <span>GSAP</span>
+                </div>
+                <a href="#" class="btn btn-text">Read Case Study <i data-lucide="arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Navigation Arrows -->
+          <button class="slider-arrow prev-arrow" id="sliderPrevBtn" aria-label="Previous Project">
+            <i data-lucide="chevron-left"></i>
+          </button>
+          <button class="slider-arrow next-arrow" id="sliderNextBtn" aria-label="Next Project">
+            <i data-lucide="chevron-right"></i>
+          </button>
+
+          <!-- Slider Indicators -->
+          <div class="slider-dots" id="sliderDots">
+            <span class="slider-dot active" data-slide="0"></span>
+            <span class="slider-dot" data-slide="1"></span>
+            <span class="slider-dot" data-slide="2"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project Planner Section (Interactive To-Do List Widget) -->
+    <section class="planner-section" id="planner">
+      <div class="planner-bg-decorations">
+        <div class="decor-circle"></div>
+      </div>
+      <div class="container planner-container">
+        <div class="planner-intro">
+          <span class="section-tag">COLLABORATION</span>
+          <h2 class="section-title">Project Planner</h2>
+          <p>
+            Planning a project together? Build your customized collaboration checklist right here. Add items for milestones, design reviews, or testing phases, and save them for your review.
+          </p>
+          <div class="planner-features">
+            <div class="feature-item">
+              <i data-lucide="check-circle" class="feat-icon"></i>
+              <span>Define goals interactively</span>
+            </div>
+            <div class="feature-item">
+              <i data-lucide="save" class="feat-icon"></i>
+              <span>Saved in Local Storage</span>
+            </div>
+            <div class="feature-item">
+              <i data-lucide="heart" class="feat-icon"></i>
+              <span>Clean and intuitive interface</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Todo List Widget -->
+        <div class="todo-widget-wrapper">
+          <div class="todo-header">
+            <h3>Project Milestones</h3>
+            <span class="todo-counter" id="todoCounter">0 tasks left</span>
+          </div>
+          
+          <form class="todo-form" id="todoForm">
+            <input type="text" id="todoInput" placeholder="Add a new project milestone (e.g. Design review)..." required autocomplete="off">
+            <button type="submit" class="btn btn-add" aria-label="Add milestone">
+              <i data-lucide="plus"></i>
+            </button>
+          </form>
+
+          <ul class="todo-list" id="todoList">
+            <!-- Dynamic task items go here -->
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Form with Validation -->
+    <section class="contact-section" id="contact">
+      <div class="container contact-container">
+        <div class="section-header centered">
+          <span class="section-tag">CONNECT</span>
+          <h2 class="section-title">Get In Touch</h2>
+          <div class="section-divider"></div>
+          <p class="section-desc">
+            Let's discuss how we can work together. Fill out the contact form below and I'll get back to you within 24 hours.
+          </p>
+        </div>
+
+        <div class="contact-card">
+          <!-- Success State Display -->
+          <div class="success-banner" id="successBanner">
+            <div class="success-icon-wrap">
+              <i data-lucide="check" class="success-icon"></i>
+            </div>
+            <h3>Thank You!</h3>
+            <p>Your message has been sent successfully. Aria will contact you soon!</p>
+            <button class="btn btn-secondary" id="resetContactFormBtn">Send Another Message</button>
+          </div>
+
+          <!-- Interactive Form -->
+          <form class="contact-form" id="contactForm" novalidate>
+            <div class="form-row">
+              <!-- Name Input Group -->
+              <div class="input-group">
+                <label for="contactName">Your Name</label>
+                <div class="input-field-wrapper">
+                  <i data-lucide="user" class="input-icon"></i>
+                  <input type="text" id="contactName" name="name" placeholder="John Doe" required autocomplete="name">
+                </div>
+                <span class="error-msg" id="nameError">Name is required (minimum 3 characters).</span>
+              </div>
+              
+              <!-- Email Input Group -->
+              <div class="input-group">
+                <label for="contactEmail">Email Address</label>
+                <div class="input-field-wrapper">
+                  <i data-lucide="mail" class="input-icon"></i>
+                  <input type="email" id="contactEmail" name="email" placeholder="john@example.com" required autocomplete="email">
+                </div>
+                <span class="error-msg" id="emailError">Please enter a valid email address.</span>
+              </div>
+            </div>
+
+            <!-- Subject Input Group -->
+            <div class="input-group">
+              <label for="contactSubject">Subject</label>
+              <div class="input-field-wrapper">
+                <i data-lucide="message-square" class="input-icon"></i>
+                <input type="text" id="contactSubject" name="subject" placeholder="Project Inquiry" required>
+              </div>
+              <span class="error-msg" id="subjectError">Subject must be at least 4 characters.</span>
+            </div>
+
+            <!-- Message Input Group -->
+            <div class="input-group">
+              <label for="contactMessage">Message</label>
+              <div class="input-field-wrapper textarea-wrapper">
+                <i data-lucide="edit-3" class="input-icon textarea-icon"></i>
+                <textarea id="contactMessage" name="message" rows="5" placeholder="Hi Aria, I'd like to collaborate on..." required></textarea>
+              </div>
+              <span class="error-msg" id="messageError">Message must be at least 10 characters.</span>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block">
+              Send Message <i data-lucide="send"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="container footer-container">
+      <div class="footer-info">
+        <a href="#" class="logo footer-logo">
+          <span class="logo-dot"></span> aria.vance
+        </a>
+        <p>Crafting high-end creative digital designs & applications.</p>
+      </div>
+      
+      <div class="footer-socials">
+        <a href="#" class="social-link" aria-label="GitHub"><i data-lucide="github"></i></a>
+        <a href="#" class="social-link" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+        <a href="#" class="social-link" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+        <a href="#" class="social-link" aria-label="Figma"><i data-lucide="figma"></i></a>
+      </div>
+
+      <div class="footer-copyright">
+        <p>&copy; 2026 Aria Vance. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Link script.js -->
+  <script src="script.js"></script>
+</body>
+</html>
